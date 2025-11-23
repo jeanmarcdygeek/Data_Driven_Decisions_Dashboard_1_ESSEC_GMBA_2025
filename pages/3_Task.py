@@ -49,6 +49,11 @@ with st.expander("How to Allocate Your €1,000,000 Bonus Budget", expanded=True
     - Allocate larger bonuses to these top performers
     - Distribute remaining budget to other managers proportionally
     
+    **Option D: Custom Strategy**
+    - Attendees decide the best allocation rule based on their analysis
+    - Combine elements from Options A, B, and C, or create a completely new approach
+    - Consider your organization's specific priorities and values
+    
     #### Key Questions to Ask Yourself:
     1. **Who consistently outperformed?** (Check 1Y and 3Y performance)
     2. **Who took smart risks?** (High returns with reasonable volatility)
@@ -121,6 +126,13 @@ if "funds_list" in st.session_state:
     # Update session state
     st.session_state["bonus_allocations"] = edited_df
     
+    # Merge with funds_list to get additional info for metrics
+    merged_df = edited_df.merge(
+        funds_list[['Fund', 'Gender', 'E Score', 'Age']],
+        on='Fund',
+        how='left'
+    )
+    
     # Calculate metrics
     st.markdown("---")
     st.markdown("### 📈 Allocation Metrics")
@@ -180,6 +192,95 @@ if "funds_list" in st.session_state:
     with col4:
         std_bonus = edited_df['Bonus (€)'].std()
         st.metric("Standard Deviation", f"€{std_bonus:,.0f}")
+    
+    # Gender, ESG, and Age metrics
+    st.markdown("#### Diversity & ESG Metrics")
+    
+    # Gender metrics
+    if 'Gender' in merged_df.columns and merged_df['Gender'].notna().any():
+        gender_bonus = merged_df[merged_df['Bonus (€)'] > 0].groupby('Gender')['Bonus (€)'].agg(['sum', 'mean', 'count'])
+        gender_total = merged_df.groupby('Gender')['Bonus (€)'].sum()
+        
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            st.markdown("**Gender Distribution**")
+            if len(gender_bonus) > 0:
+                for gender in gender_bonus.index:
+                    total = gender_total.get(gender, 0)
+                    pct = (total / total_allocated * 100) if total_allocated > 0 else 0
+                    avg = gender_bonus.loc[gender, 'mean']
+                    count = int(gender_bonus.loc[gender, 'count'])
+                    st.markdown(f"- **{gender}**: €{total:,.0f} ({pct:.1f}%) | Avg: €{avg:,.0f} | Count: {count}")
+            else:
+                st.markdown("No bonuses allocated yet")
+    
+    # ESG metrics
+    if 'E Score' in merged_df.columns and merged_df['E Score'].notna().any():
+        with col2:
+            st.markdown("**ESG (E Score) Metrics**")
+            esg_with_bonus = merged_df[(merged_df['Bonus (€)'] > 0) & (merged_df['E Score'].notna())]
+            if len(esg_with_bonus) > 0:
+                # Convert E Score to numeric if needed
+                esg_with_bonus = esg_with_bonus.copy()
+                esg_with_bonus['E Score'] = pd.to_numeric(esg_with_bonus['E Score'], errors='coerce')
+                esg_with_bonus = esg_with_bonus[esg_with_bonus['E Score'].notna()]
+                
+                if len(esg_with_bonus) > 0:
+                    # Calculate weighted average E Score (weighted by bonus amount)
+                    total_esg_bonus = esg_with_bonus['Bonus (€)'].sum()
+                    weighted_avg_esg = (esg_with_bonus['E Score'] * esg_with_bonus['Bonus (€)']).sum() / total_esg_bonus if total_esg_bonus > 0 else 0
+                    avg_esg = esg_with_bonus['E Score'].mean()
+                    
+                    # Count managers with good ESG (lower is better, so let's say < 20 is good)
+                    good_esg = esg_with_bonus[esg_with_bonus['E Score'] < 20]
+                    good_esg_bonus = good_esg['Bonus (€)'].sum()
+                    good_esg_pct = (good_esg_bonus / total_allocated * 100) if total_allocated > 0 else 0
+                    
+                    st.markdown(f"- **Weighted Avg E Score**: {weighted_avg_esg:.2f}")
+                    st.markdown(f"- **Average E Score**: {avg_esg:.2f}")
+                    st.markdown(f"- **Good ESG (E<20)**: €{good_esg_bonus:,.0f} ({good_esg_pct:.1f}%)")
+                else:
+                    st.markdown("No valid ESG data")
+            else:
+                st.markdown("No bonuses allocated yet")
+    
+    # Age metrics
+    if 'Age' in merged_df.columns and merged_df['Age'].notna().any():
+        with col3:
+            st.markdown("**Age Distribution**")
+            age_with_bonus = merged_df[(merged_df['Bonus (€)'] > 0) & (merged_df['Age'].notna())]
+            if len(age_with_bonus) > 0:
+                # Convert Age to numeric if needed
+                age_with_bonus = age_with_bonus.copy()
+                age_with_bonus['Age'] = pd.to_numeric(age_with_bonus['Age'], errors='coerce')
+                age_with_bonus = age_with_bonus[age_with_bonus['Age'].notna()]
+                
+                if len(age_with_bonus) > 0:
+                    # Calculate weighted average age
+                    total_age_bonus = age_with_bonus['Bonus (€)'].sum()
+                    weighted_avg_age = (age_with_bonus['Age'] * age_with_bonus['Bonus (€)']).sum() / total_age_bonus if total_age_bonus > 0 else 0
+                    avg_age = age_with_bonus['Age'].mean()
+                    
+                    # Age groups
+                    age_groups = {
+                        'Young (<40)': age_with_bonus[age_with_bonus['Age'] < 40],
+                        'Mid (40-50)': age_with_bonus[(age_with_bonus['Age'] >= 40) & (age_with_bonus['Age'] < 50)],
+                        'Senior (50+)': age_with_bonus[age_with_bonus['Age'] >= 50]
+                    }
+                    
+                    st.markdown(f"- **Weighted Avg Age**: {weighted_avg_age:.1f} years")
+                    st.markdown(f"- **Average Age**: {avg_age:.1f} years")
+                    
+                    for group_name, group_df in age_groups.items():
+                        if len(group_df) > 0:
+                            group_total = group_df['Bonus (€)'].sum()
+                            group_pct = (group_total / total_allocated * 100) if total_allocated > 0 else 0
+                            st.markdown(f"- **{group_name}**: €{group_total:,.0f} ({group_pct:.1f}%)")
+                else:
+                    st.markdown("No valid age data")
+            else:
+                st.markdown("No bonuses allocated yet")
     
     # Budget validation
     if total_allocated > BUDGET:
