@@ -1,0 +1,300 @@
+{
+    "values": [
+        {
+            "entityId": 55949,
+            "parentEntityId": null,
+            "type": "CLSS",
+            "clientId": 25,
+            "clientCode": "LU1937143664",
+            "lastModified": "2025-11-22T10:06:46.000Z",
+            "lastModifiedBy": 2071,
+            "created": "2023-01-23T16:43:13.000Z",
+            "createdBy": 2071,
+            "properties_pub": {
+                "asset_class": {
+                    "value": "EQUITY"
+                },
+                "aum_currency": {
+                    "value": "EUR"
+                },
+                "benchmark_name": {
+                    "value": "100% MSCI Europe ex UK Micro Cap Total Return net"
+                },
+                "benchmark_start_date": {
+                    "value": "2020-01-15"
+                },
+                "countries_bank": {
+                    "value": [
+                        "DK",
+                        "FI",
+                        "FR",
+                        "CH",
+                        "ES",
+                        "NL",
+                        "DE",
+                        "SE",
+                        "NO",
+                        "IT",
+                        "AT",
+                        "PT",
+                        "LU",
+                        "BE"
+                    ]
+                },
+                "countries_consultant": {
+                    "value": [
+                        "DK",
+                        "FI",
+                        "FR",
+                        "CH",
+                        "ES",
+                        "NL",
+                        "DE",
+                        "SE",
+                        "NO",
+                        "IT",
+                        "AT",
+                        "PT",
+                        "LU",
+                        "BE"
+                    ]
+                },
+                "countries_institutional": {
+                    "value": [
+                        "DK",
+                        "FI",
+                        "FR",
+                        "CH",
+                        "ES",
+                        "NL",
+                        "DE",
+                        "SE",
+                        "NO",
+                        "IT",
+                        "AT",
+                        "PT",
+                        "LU",
+                        "BE"
+                    ]
+                },
+                "countries_private": {
+                    "value": [
+                        "FR",
+                        "CH",
+                        "DE",
+                        "IT",
+                        "BE"
+                    ]
+                },
+                "countries_professional": {
+                    "value": [
+                        "DK",
+                        "FI",
+                        "FR",
+                        "CH",
+                        "ES",
+                        "NL",
+                        "DE",
+                        "SE",
+                        "NO",
+                        "IT",
+                        "AT",
+                        "PT",
+                        "LU",
+                        "BE"
+                    ]
+                },
+                "countries_retail": {
+                    "value": [
+                        "FR",
+                        "CH",
+                        "DE",
+                        "IT",
+                        "BE"
+                    ]
+                },
+                "currency": {
+                    "value": "EUR"
+                },
+                "custodian": {
+                    "value": "State Street Bank International GmbH (Luxembourg Branch)"
+                },
+                "display_order_au": {
+                    "value": 99
+                },
+                "display_order_ch": {
+                    "value": 99
+                },
+                "display_order_eu": {
+                    "value": 99
+                },
+                "display_order_gb": {
+                    "value": 99
+                },
+                "display_order_hk": {
+                    "value": 99
+                },
+                "display_order_sg": {
+                    "value": 99
+                },
+                "distribution_type": {
+                    "value": "Accumulation"
+                },
+                "esg_display": {
+                    "value": "esg_all"
+                },
+                "fund_id": {
+                    "value": "70932"
+                },
+                "fund_name": {
+                    "value": "AXA WF Europe Ex-UK Microcap A Capitalisation EUR pf"
+                },
+                "fund_name_url": {
+                    "value": "AXA WF Europe Ex-UK Microcap A Capitalisation EUR pf"
+                },
+                "fund_type": {
+                    "value": "UCITS"
+                },
+                "fund_umbrella_name": {
+                    "value": "AXA WF Europe Ex-UK Microcap"
+                },
+                "hidden": {
+                    "value": "no"
+                },
+                "investment_region": {
+                    "value": "Europe"
+                },
+                "isin": {
+                    "value": "LU1937143664"
+                },
+                "labels": {
+                    "value": [
+                        "ISR"
+                    ]
+                },
+                "launch_first_nav_date_portfolio": {
+                    "value": "2019-06-11"
+                },
+                "launch_first_nav_date_shareclass": {
+                    "value": "2019-06-11"
+                },
+                "morningstar_rating": {
+                    "value": 3
+                },
+                "nav_currency": {
+                    "value": "EUR"
+                },
+                "primary_sc_indicator": {
+                    "value": "Yes"
+                },
+                "product_type": {
+                    "value": "Mutual Fund"
+                },
+                "regulation_type": {
+                    "value": [
+                        "PRIIPS",
+                        "UCITS"
+                    ]
+                },
+                "sfdr": {
+                    "value": "Article 8"
+                },
+                "share_class": {
+                    "value": "Acc EUR A pf"
+                },
+                "share_class_type": {
+                    "value": "Accumulation"
+                },
+                "sri_risk_score": {
+                    "value": 4
+                },
+                "srri_risk_score": {
+                    "value": 6
+                },
+                "status": {
+                    "value": "Active"
+                }
+            },
+            "properties_draft": null,
+            "userProperties_pub": null,
+            "userProperties_draft": null,
+            "jobReference": "e695dc41-58d3-40d7-a385-bd72bcfdd96c",
+            "rowHash": "1222fd6a9d05ff258fba22e6faa89cddb0131de416ccd71188d471c611aa7061",
+            "historicalDatasets": [
+                {
+                    "historicalDatasetId": 1019345461,
+                    "asAtDate": "2025-10-31T00:00:00.000Z",
+                    "values": [
+                        {
+                            "1y": 14.824216,
+                            "3y": 13.177161,
+                            "5y": 16.959515,
+                            "label": "Portfolio Volatility (%)",
+                            "launch": 19.190964,
+                            "value": 0,
+                            "ytd": 14.519864
+                        },
+                        {
+                            "1y": 12.473787,
+                            "3y": 11.8168745,
+                            "5y": 16.153643,
+                            "label": "Benchmark Volatility (%)",
+                            "launch": 18.374294,
+                            "value": 0,
+                            "ytd": 11.996343
+                        },
+                        {
+                            "1y": 5.000046,
+                            "3y": 4.601828,
+                            "5y": 4.7554536,
+                            "label": "Relative Risk/Tracking Error (%)",
+                            "launch": 4.6865044,
+                            "value": 0,
+                            "ytd": 4.722803
+                        },
+                        {
+                            "1y": 1.6621912,
+                            "3y": 0.53599703,
+                            "5y": 0.39299017,
+                            "label": "Sharpe Ratio",
+                            "launch": 0.41353744,
+                            "value": 0,
+                            "ytd": 1.9177512
+                        },
+                        {
+                            "1y": 1.42305,
+                            "3y": 0.9403679,
+                            "5y": 0.5399331,
+                            "label": "Information Ratio",
+                            "launch": 0.78524554,
+                            "value": 0,
+                            "ytd": 1.0167732
+                        },
+                        {
+                            "1y": 0.06877575,
+                            "3y": 0.324853,
+                            "5y": 0.20716116,
+                            "label": "Alpha",
+                            "launch": 0.29269728,
+                            "value": 0,
+                            "ytd": 0.00915958
+                        },
+                        {
+                            "1y": 1.1258442,
+                            "3y": 1.0459121,
+                            "5y": 1.0078,
+                            "label": "Bêta",
+                            "launch": 1.0129069,
+                            "value": 0,
+                            "ytd": 1.1549882
+                        }
+                    ],
+                    "entityId": 55949,
+                    "code": "risk_indicators",
+                    "ccy": "N/A"
+                }
+            ]
+        }
+    ],
+    "total": 1
+}

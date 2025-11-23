@@ -1,0 +1,382 @@
+{
+    "values": [
+        {
+            "entityId": 55990,
+            "parentEntityId": null,
+            "type": "CLSS",
+            "clientId": 25,
+            "clientCode": "LU0125727601",
+            "lastModified": "2025-11-22T08:24:02.000Z",
+            "lastModifiedBy": 2071,
+            "created": "2023-01-23T16:43:13.000Z",
+            "createdBy": 2071,
+            "properties_pub": {
+                "asset_class": {
+                    "value": "EQUITY"
+                },
+                "aum_currency": {
+                    "value": "EUR"
+                },
+                "benchmark_name": {
+                    "value": "100% MSCI Europe Total Return Net"
+                },
+                "benchmark_start_date": {
+                    "value": "2008-12-01"
+                },
+                "countries_bank": {
+                    "value": [
+                        "CH",
+                        "IT",
+                        "DE",
+                        "BE",
+                        "NO",
+                        "SG",
+                        "FR",
+                        "FI",
+                        "NL",
+                        "SE",
+                        "ES",
+                        "LU",
+                        "AT",
+                        "GB",
+                        "DK"
+                    ]
+                },
+                "countries_consultant": {
+                    "value": [
+                        "CH",
+                        "IT",
+                        "DE",
+                        "BE",
+                        "NO",
+                        "SG",
+                        "FR",
+                        "FI",
+                        "NL",
+                        "SE",
+                        "ES",
+                        "LU",
+                        "AT",
+                        "GB",
+                        "DK"
+                    ]
+                },
+                "countries_institutional": {
+                    "value": [
+                        "CH",
+                        "IT",
+                        "DE",
+                        "BE",
+                        "NO",
+                        "SG",
+                        "FR",
+                        "FI",
+                        "NL",
+                        "SE",
+                        "ES",
+                        "LU",
+                        "AT",
+                        "GB",
+                        "DK"
+                    ]
+                },
+                "countries_private": {
+                    "value": [
+                        "CH",
+                        "IT",
+                        "DE",
+                        "BE",
+                        "FR",
+                        "GB"
+                    ]
+                },
+                "countries_professional": {
+                    "value": [
+                        "CH",
+                        "IT",
+                        "DE",
+                        "BE",
+                        "NO",
+                        "SG",
+                        "FR",
+                        "FI",
+                        "NL",
+                        "SE",
+                        "ES",
+                        "LU",
+                        "AT",
+                        "GB",
+                        "DK"
+                    ]
+                },
+                "countries_retail": {
+                    "value": [
+                        "CH",
+                        "IT",
+                        "DE",
+                        "BE",
+                        "FR",
+                        "GB"
+                    ]
+                },
+                "currency": {
+                    "value": "EUR"
+                },
+                "custodian": {
+                    "value": "State Street Bank International GmbH (Luxembourg Branch)"
+                },
+                "display_order_au": {
+                    "value": 99
+                },
+                "display_order_ch": {
+                    "value": 99
+                },
+                "display_order_eu": {
+                    "value": 99
+                },
+                "display_order_gb": {
+                    "value": 99
+                },
+                "display_order_hk": {
+                    "value": 99
+                },
+                "display_order_sg": {
+                    "value": 99
+                },
+                "distribution_type": {
+                    "value": "Accumulation"
+                },
+                "esg_display": {
+                    "value": "esg_all"
+                },
+                "fm_insight_published_date": {
+                    "value": "2025-10-31"
+                },
+                "fund_id": {
+                    "value": "2413"
+                },
+                "fund_name": {
+                    "value": "AXA WF ACT Europe Equity A Capitalisation EUR"
+                },
+                "fund_name_url": {
+                    "value": "AXA WF ACT Europe Equity A Capitalisation EUR"
+                },
+                "fund_type": {
+                    "value": "UCITS"
+                },
+                "fund_umbrella_name": {
+                    "value": "AXA WF ACT Europe Equity"
+                },
+                "hidden": {
+                    "value": "no"
+                },
+                "investment_region": {
+                    "value": "Europe"
+                },
+                "isin": {
+                    "value": "LU0125727601"
+                },
+                "labels": {
+                    "value": [
+                        "ISR"
+                    ]
+                },
+                "launch_first_nav_date_portfolio": {
+                    "value": "2001-03-09"
+                },
+                "launch_first_nav_date_shareclass": {
+                    "value": "2001-03-09"
+                },
+                "morningstar_rating": {
+                    "value": 3
+                },
+                "nav_currency": {
+                    "value": "EUR"
+                },
+                "primary_sc_indicator": {
+                    "value": "Yes"
+                },
+                "product_type": {
+                    "value": "Mutual Fund"
+                },
+                "regulation_type": {
+                    "value": [
+                        "PRIIPS",
+                        "UCITS"
+                    ]
+                },
+                "sfdr": {
+                    "value": "Article 9"
+                },
+                "share_class": {
+                    "value": "Acc EUR A"
+                },
+                "share_class_type": {
+                    "value": "Accumulation"
+                },
+                "sri_risk_score": {
+                    "value": 4
+                },
+                "srri_risk_score": {
+                    "value": 5
+                },
+                "status": {
+                    "value": "Active"
+                }
+            },
+            "properties_draft": null,
+            "userProperties_pub": null,
+            "userProperties_draft": null,
+            "jobReference": "0214ce6a-fcb2-4985-8892-15bd654d0dff",
+            "rowHash": "b4a23a4d4414ad80674b68d20094c1163d76f53f7ed08b89664a2f05e54a6109",
+            "historicalDatasets": [
+                {
+                    "historicalDatasetId": 1019346232,
+                    "asAtDate": "2025-10-31T00:00:00.000Z",
+                    "values": [
+                        {
+                            "1y": 15.963827,
+                            "3y": 10.707139,
+                            "5y": 13.554363,
+                            "label": "Portfolio Volatility (%)",
+                            "launch": 15.986395,
+                            "value": 0,
+                            "ytd": 16.526463
+                        },
+                        {
+                            "1y": 16.093658,
+                            "3y": 10.401815,
+                            "5y": 13.242393,
+                            "label": "Benchmark Volatility (%)",
+                            "launch": 13.631829,
+                            "value": 0,
+                            "ytd": 16.057098
+                        },
+                        {
+                            "1y": 3.1580899,
+                            "3y": 2.8299913,
+                            "5y": 2.6043048,
+                            "label": "Relative Risk/Tracking Error (%)",
+                            "value": 0,
+                            "ytd": 2.7618551
+                        },
+                        {
+                            "1y": 0.47137165,
+                            "3y": 0.8276132,
+                            "5y": 0.86409116,
+                            "label": "Sharpe Ratio",
+                            "launch": 0.21557377,
+                            "value": 0,
+                            "ytd": 0.5521358
+                        },
+                        {
+                            "1y": -1.8544536,
+                            "3y": -0.7926692,
+                            "5y": -0.14419007,
+                            "label": "Information Ratio",
+                            "value": 0,
+                            "ytd": -2.5686266
+                        },
+                        {
+                            "1y": -0.08857875,
+                            "3y": -0.15600403,
+                            "5y": -0.029876485,
+                            "label": "Alpha",
+                            "value": 0,
+                            "ytd": -0.12094324
+                        },
+                        {
+                            "1y": 0.97271186,
+                            "3y": 0.9927736,
+                            "5y": 1.0044975,
+                            "label": "Bêta",
+                            "value": 0,
+                            "ytd": 1.0148659
+                        }
+                    ],
+                    "entityId": 55990,
+                    "code": "risk_indicators",
+                    "ccy": "N/A"
+                },
+                {
+                    "historicalDatasetId": 1019756312,
+                    "asAtDate": "2025-10-31T00:00:00.000Z",
+                    "values": [
+                        {
+                            "label": "Launch",
+                            "value": 122.67321
+                        },
+                        {
+                            "benchmark_value": 91.46005,
+                            "label": "5Y",
+                            "value": 72.43242
+                        },
+                        {
+                            "benchmark_value": 96.735466,
+                            "label": "10Y",
+                            "value": 66.3764
+                        },
+                        {
+                            "benchmark_value": 49.47367,
+                            "label": "3Y",
+                            "value": 33.565002
+                        },
+                        {
+                            "benchmark_value": 15.875001,
+                            "label": "1Y",
+                            "value": 8.097021
+                        },
+                        {
+                            "benchmark_value": 15.23266,
+                            "label": "YTD",
+                            "value": 7.866637
+                        },
+                        {
+                            "benchmark_value": 5.3858137,
+                            "label": "3M",
+                            "value": 4.3681884
+                        },
+                        {
+                            "benchmark_value": 2.5551093,
+                            "label": "1M",
+                            "value": 2.9305668
+                        }
+                    ],
+                    "entityId": 55990,
+                    "code": "cumulative_performance",
+                    "ccy": "N/A"
+                },
+                {
+                    "historicalDatasetId": 1019756396,
+                    "asAtDate": "2025-10-31T00:00:00.000Z",
+                    "values": [
+                        {
+                            "benchmark_value": 13.855463,
+                            "label": "5Y",
+                            "value": 11.499259
+                        },
+                        {
+                            "benchmark_value": 14.323403,
+                            "label": "3Y",
+                            "value": 10.1182575
+                        },
+                        {
+                            "benchmark_value": 15.875001,
+                            "label": "1Y",
+                            "value": 8.097021
+                        },
+                        {
+                            "benchmark_value": null,
+                            "label": "Launch",
+                            "value": 3.299147
+                        }
+                    ],
+                    "entityId": 55990,
+                    "code": "annualised_performance",
+                    "ccy": "N/A"
+                }
+            ]
+        }
+    ],
+    "total": 1
+}
