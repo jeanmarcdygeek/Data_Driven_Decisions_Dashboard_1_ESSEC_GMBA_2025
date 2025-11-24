@@ -181,11 +181,13 @@ if selected_fund:
         display_df["nav"] = display_df["ptf_returns"] 
         display_df["bench"] = display_df["bench_returns"] 
 
-        display_df.loc[display_df["date"] == min_date.strftime("%Y-%m-%d"), "nav"] = 100
-        display_df.loc[display_df["date"] == min_date.strftime("%Y-%m-%d"), "bench"] = 100
+        min_date = display_df["date"].min()
+        
+        display_df.loc[display_df["date"].astype(str) == min_date, "nav"] = 100
+        display_df.loc[display_df["date"].astype(str) == min_date, "bench"] = 100
         
         display_df["nav"] = display_df["nav"].cumprod()
-        display_df["bench"] = display_df["bench"].cumprod()
+        display_df["bench"] = display_df["bench"].cumprod()    
     else :
         display_df = df.copy()
 
